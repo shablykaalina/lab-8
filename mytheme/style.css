@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7C07A9;
+    text-align: center;
+}
+/* Шапка */
+header {
+    margin-bottom: 5px;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #AC66D5;
+}
+.buttons {
+    display: flex;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+.buttons button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #9D3ED5;
+}
+.buttons button:hover {
+    background-color: #7C07A9 ;
+    color: aliceblue;
+}
+/* Игрушка 1 */
+.toys1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0px;
+}
+.slider1 h2{
+    color: aliceblue;
+}
+.slider1 {
+    position: relative;
+    margin: 10px auto auto 10px;
+    width: 65%;
+}
+.slider1 img {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+.slider1 img.active {
+    display: block;
+}
+.slider1-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.slider1-buttons button {
+    background-color: #5E2580;
+    color: aliceblue;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.slider1-buttons button:hover {
+    background-color: #47036F;
+}
+/* картинки 1 игрушки */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+.container .block1, .container .block2 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.container .block1 img {
+    margin: 15px;
+    width: 85%;
+}
+.container .block2 img {
+    margin: 15px;
+    width: 90%;
+}
+  /* оставшиеся игрушки */
+.other-toys {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0px;
+}
+.other-toys h2{
+    color: aliceblue;
+}
+/* игрушка 2 */
+.slider2 {
+    position: relative;
+    margin: 5px auto auto 10px;
+}
+.slider2 img {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+.slider2 img.active {
+    display: block;
+}
+.slider2-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.slider2-buttons button {
+    background-color: #5E2580;
+    color: aliceblue;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.slider2-buttons button:hover {
+    background-color:#47036F;
+}
+/* Игрушка 3 */
+.slider3 {
+    position: relative;
+    margin: 5px auto auto 10px;
+}
+.slider3 img {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+.slider3 img.active {
+    display: block;
+}
+.slider3-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.slider3-buttons button {
+    background-color: #5E2580;
+    color: aliceblue;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.slider3-buttons button:hover {
+    background-color: #47036F;
+}
+/* игрушки 4 и 5 */
+.other-toys .block3 {
+ margin-top: 15px;
+}
+.other-toys .block3 img {
+    margin: 10px;
+    width: 40%;
+   }
+   /* ссылки на соц.сети */
+footer  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #AC66D5 ;
+}
+footer p{
+    margin: 0;
+}
+footer .social-icons {
+    display: flex;
+    gap: 10px;
+}
+footer a{
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #47036F;
+}
+/* Адаптивные стили  */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .toys1, .other-toys {
+        flex-direction: column;
+    }
+    .slider1, .slider2, .slider3 {
+        width: 100%;
+    }
+    .other-toys .block3 {
+        width: 1px;
+        display: flex;
+    }
+    .container {
+        width: 100%;
+    }
+    .buttons button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    .slider1-buttons button, .slider2-buttons button, .slider3-buttons button {
+        padding: 4px;
+    }
+    .container .block1 img, .container .block2 img {
+        width: 100%;
+    }
+    .other-toys .block3 img {
+        width: 100%;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer a {
+        margin: 5px 0;
+    }
+    .other-toys .block3  {
+        flex-direction: column;
+        align-items: center;
+       width: 100%;
+    }
+}
